@@ -1,0 +1,66 @@
+{
+  "_from": "electron-windows-interactive-notifications",
+  "_id": "electron-windows-interactive-notifications@0.7.7",
+  "_inBundle": false,
+  "_integrity": "sha1-L5GuaYLRRYEXZiJMWBZFoHa2plk=",
+  "_location": "/electron-windows-interactive-notifications",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "electron-windows-interactive-notifications",
+    "name": "electron-windows-interactive-notifications",
+    "escapedName": "electron-windows-interactive-notifications",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/electron-windows-interactive-notifications/-/electron-windows-interactive-notifications-0.7.7.tgz",
+  "_shasum": "2f91ae6982d145811766224c581645a076b6a659",
+  "_spec": "electron-windows-interactive-notifications",
+  "_where": "D:\\local\\notes",
+  "author": {
+    "name": "Felix Rieseberg",
+    "email": "felix@felixrieseberg.com",
+    "url": "http://www.felixrieseberg.com"
+  },
+  "bugs": {
+    "url": "https://github.com/felixrieseberg/electron-windows-interactive-notifications/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "bindings": "^1.2.1",
+    "nan": "^2.4.0"
+  },
+  "deprecated": false,
+  "description": "Interactive notifications for Windows, from Node",
+  "devDependencies": {
+    "fs-extra": "^1.0.0"
+  },
+  "engines": {
+    "node": ">6.0.0"
+  },
+  "homepage": "https://github.com/felixrieseberg/electron-windows-interactive-notifications#readme",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "name": "electron-windows-interactive-notifications",
+  "os": [
+    "win32"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felixrieseberg/electron-windows-interactive-notifications.git"
+  },
+  "scripts": {
+    "build": "npm run build64 && npm run build86",
+    "build64": " msbuild .\\InteractiveNotifications.sln /p:Configuration=Release /p:Platform=x64",
+    "build86": " msbuild .\\InteractiveNotifications.sln /p:Configuration=Release /p:Platform=x86",
+    "postinstall": "node-gyp rebuild && node ./scripts/postinstall.js",
+    "preinstall": "node ./scripts/preinstall.js && npm run build"
+  },
+  "version": "0.7.7"
+}
